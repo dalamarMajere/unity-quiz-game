@@ -53,7 +53,7 @@ Material:
     - _ColorMask: 15
     - _CullMode: 0
     - _Diffuse: 0.5
-    - _FaceDilate: 0.18
+    - _FaceDilate: 0
     - _FaceUVSpeedX: 0
     - _FaceUVSpeedY: 0
     - _GlowInner: 0.14
@@ -67,12 +67,12 @@ Material:
     - _OutlineSoftness: 0
     - _OutlineUVSpeedX: 0
     - _OutlineUVSpeedY: 0
-    - _OutlineWidth: 0.197
+    - _OutlineWidth: 0
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
     - _ScaleRatioA: 0.9
-    - _ScaleRatioB: 0.56925
-    - _ScaleRatioC: 0.56925
+    - _ScaleRatioB: 0.73125
+    - _ScaleRatioC: 0.73125
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
@@ -117,9 +117,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: JazzCreateBubble SDF 2
   m_EditorClassIdentifier: 
-  hashCode: -809274735
+  hashCode: -809274734
   material: {fileID: -6908610659393316659}
-  materialHashCode: -468034927
+  materialHashCode: 1235767282
   m_Version: 1.1.0
   m_SourceFontFileGUID: 58b647c5b2ec4184e9a07a561cdf0644
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 58b647c5b2ec4184e9a07a561cdf0644, type: 3}
