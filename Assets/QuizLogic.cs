@@ -13,15 +13,52 @@ public class QuizLogic : MonoBehaviour
     [SerializeField] private TextMeshProUGUI questionText;
     private AnswerButton[] _answerButtons;
 
+    private int _currentQuestionIndex;
+
     private void Start()
     {
         _answerButtons = GetComponentsInChildren<AnswerButton>();
         
-        questionText.text = questionData.GetQuestion(0);
+        questionText.text = questionData.GetQuestion(_currentQuestionIndex);
         for (var index = 0; index < _answerButtons.Length; index++)
         {
             var answerButton = _answerButtons[index];
-            answerButton.SetAnswer(questionData.GetAnswer(0, index));
+            answerButton.ChangeAnswer(questionData.GetAnswer(_currentQuestionIndex, index));
+
+            answerButton.OnClicked += () => VerifyAnswer(index);
         }
+    }
+
+    private void VerifyAnswer(int answerButtonIndex)
+    {
+        int correctIndex = questionData.GetCorrectAnswer(_currentQuestionIndex);
+        if (_currentQuestionIndex == correctIndex)
+        {
+            _answerButtons[answerButtonIndex].SetAnswerCorrect();
+            AnsweredCorrectly();
+        }
+        else
+        {
+            _answerButtons[answerButtonIndex].SetAnswerWrong();
+            _answerButtons[correctIndex].SetAnswerCorrect();
+            AnsweredWrong();
+        }
+
+        SetNextQuestion();
+    }
+
+    private void SetNextQuestion()
+    {
+        
+    }
+
+    private void AnsweredWrong()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    private void AnsweredCorrectly()
+    {
+        throw new System.NotImplementedException();
     }
 }

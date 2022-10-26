@@ -53,5 +53,15 @@ namespace Data
 
             return "";
         }
+
+        public int GetCorrectAnswer(int questionIndex)
+        {
+            if (questionIndex >= 0 && questionIndex < questions.Length)
+            {
+                return questions[questionIndex].CorrectAnswerIndex;
+            }
+
+            return -1;
+        }
     }
 }

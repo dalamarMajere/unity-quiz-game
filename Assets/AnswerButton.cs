@@ -7,25 +7,41 @@ using UnityEngine.UI;
 public class AnswerButton : MonoBehaviour
 {
     public event Action OnClicked;
+
+    [SerializeField] private Sprite defaultSprite;
+    [SerializeField] private Sprite correctAnswerSprite;
+    [SerializeField] private Sprite wrongAnswerSprite;
     
     private TextMeshProUGUI _answer;
     private Button _button;
+    private Image _image;
 
     private void Start()
     {
         _answer = GetComponentInChildren<TextMeshProUGUI>();
         _button = GetComponent<Button>();
 
-        _button.onClick.AddListener(Notify);
+        _button.onClick.AddListener(ButtonClicked);
     }
 
-    private void Notify()
+    private void ButtonClicked()
     {
         OnClicked?.Invoke();
     }
 
-    public void SetAnswer(string answer)
+    public void SetAnswerWrong()
+    {
+        _image.sprite = wrongAnswerSprite;
+    }
+
+    public void SetAnswerCorrect()
+    {
+        _image.sprite = correctAnswerSprite;
+    }
+    
+    public void ChangeAnswer(string answer)
     {
         _answer.text = answer;
+        _image.sprite = defaultSprite;
     }
 }
