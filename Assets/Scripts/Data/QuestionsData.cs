@@ -63,5 +63,10 @@ namespace Data
 
             return -1;
         }
+
+        public int GetQuestionsAmount()
+        {
+            return questions.Length;
+        }
     }
 }

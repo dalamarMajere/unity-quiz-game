@@ -49,7 +49,24 @@ public class QuizLogic : MonoBehaviour
 
     private void SetNextQuestion()
     {
+        _currentQuestionIndex++;
+
+        if (_currentQuestionIndex > questionData.GetQuestionsAmount())
+        {
+            EndQuiz();
+            return;
+        }
         
+        for (var index = 0; index < _answerButtons.Length; index++)
+        {
+            var answerButton = _answerButtons[index];
+            answerButton.ChangeAnswer(questionData.GetAnswer(_currentQuestionIndex, index));
+        }
+    }
+
+    private void EndQuiz()
+    {
+        throw new System.NotImplementedException();
     }
 
     private void AnsweredWrong()
