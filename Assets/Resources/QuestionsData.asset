@@ -12,4 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e0f552f567b4d745aeda00c1f4044e5, type: 3}
   m_Name: QuestionsData
   m_EditorClassIdentifier: 
-  questions: []
+  questions:
+  - question: What number is int?
+    answers:
+    - 2.4
+    - 34092039402394832094234
+    - -3
+    - 3f
+    correctAnswerIndex: 2

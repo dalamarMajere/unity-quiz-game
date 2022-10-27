@@ -16,10 +16,11 @@ public class AnswerButton : MonoBehaviour
     private Button _button;
     private Image _image;
 
-    private void Start()
+    private void Awake()
     {
         _answer = GetComponentInChildren<TextMeshProUGUI>();
         _button = GetComponent<Button>();
+        _image = GetComponent<Image>();
 
         _button.onClick.AddListener(ButtonClicked);
     }
@@ -43,5 +44,15 @@ public class AnswerButton : MonoBehaviour
     {
         _answer.text = answer;
         _image.sprite = defaultSprite;
+    }
+
+    public void BlockButton()
+    {
+        _button.interactable = false;
+    }
+    
+    public void UnblockButton()
+    {
+        _button.interactable = true;
     }
 }

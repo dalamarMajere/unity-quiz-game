@@ -54,7 +54,7 @@ namespace Data
             return "";
         }
 
-        public int GetCorrectAnswer(int questionIndex)
+        public int GetCorrectAnswerIndex(int questionIndex)
         {
             if (questionIndex >= 0 && questionIndex < questions.Length)
             {
@@ -62,6 +62,17 @@ namespace Data
             }
 
             return -1;
+        }
+
+        public string GetCorrectAnswer(int questionIndex)
+        {
+            int index = GetCorrectAnswerIndex(questionIndex);
+            if (index == -1)
+            {
+                return "";
+            }
+
+            return questions[questionIndex].GetAnswer(index);
         }
 
         public int GetQuestionsAmount()
