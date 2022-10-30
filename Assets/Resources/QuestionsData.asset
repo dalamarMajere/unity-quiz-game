@@ -34,3 +34,45 @@ MonoBehaviour:
     - 4
     - 0
     correctAnswerIndex: 1
+  - question: What is a name of C# compiler?
+    answers:
+    - Intermediate Language
+    - C++
+    - Roslyn
+    - Amen
+    correctAnswerIndex: 2
+  - question: Does .Net use virtual machine?
+    answers:
+    - Yes
+    - No
+    - Yes, only in runtime
+    - It depens on the project
+    correctAnswerIndex: 0
+  - question: What is CoreCLR?
+    answers:
+    - Framework
+    - Virtual Machine
+    - Standard
+    - Compiler
+    correctAnswerIndex: 1
+  - question: What codename does C# has?
+    answers:
+    - C++ 2.0
+    - A#
+    - COOL
+    - MORE
+    correctAnswerIndex: 2
+  - question: What does LINQ abbreviation stand for?
+    answers:
+    - Language INtegrated Queries
+    - Language Iterative Native Queries
+    - LInking Native Queries
+    - Linking INtegrated Queries
+    correctAnswerIndex: 0
+  - question: When was C# 10 released?
+    answers:
+    - 2015
+    - 2012
+    - 2020
+    - 2022
+    correctAnswerIndex: 2
