@@ -1,29 +1,22 @@
 using System;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Data
 {
     [Serializable]
-    class QuestionAnswers
+    internal class QuestionAnswers
     {
-        [TextArea(2, 6)]
-        [SerializeField] private string question;
+        [TextArea(2, 6)] [SerializeField] private string question;
         [SerializeField] private string[] answers = new string[4];
         [SerializeField] private int correctAnswerIndex;
 
         public int CorrectAnswerIndex => correctAnswerIndex;
 
-        public string[] Answers => answers;
-
         public string Question => question;
 
         public string GetAnswer(int answerIndex)
         {
-            if (answerIndex >= 0 && answerIndex < answers.Length)
-            {
-                return answers[answerIndex];
-            }
+            if (answerIndex >= 0 && answerIndex < answers.Length) return answers[answerIndex];
 
             return "";
         }
@@ -36,20 +29,15 @@ namespace Data
 
         public string GetQuestion(int index)
         {
-            if (index >= 0 && index < questions.Length)
-            {
-                return questions[index].Question;
-            }
-            
+            if (index >= 0 && index < questions.Length) return questions[index].Question;
+
             return "";
         }
 
         public string GetAnswer(int questionIndex, int answerIndex)
         {
             if (questionIndex >= 0 && questionIndex < questions.Length)
-            {
                 return questions[questionIndex].GetAnswer(answerIndex);
-            }
 
             return "";
         }
@@ -57,9 +45,7 @@ namespace Data
         public int GetCorrectAnswerIndex(int questionIndex)
         {
             if (questionIndex >= 0 && questionIndex < questions.Length)
-            {
                 return questions[questionIndex].CorrectAnswerIndex;
-            }
 
             return -1;
         }
@@ -67,12 +53,7 @@ namespace Data
         public string GetCorrectAnswer(int questionIndex)
         {
             int index = GetCorrectAnswerIndex(questionIndex);
-            if (index == -1)
-            {
-                return "";
-            }
-
-            return questions[questionIndex].GetAnswer(index);
+            return index == -1 ? "" : questions[questionIndex].GetAnswer(index);
         }
 
         public int GetQuestionsAmount()

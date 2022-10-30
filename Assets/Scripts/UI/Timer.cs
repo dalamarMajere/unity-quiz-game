@@ -12,8 +12,6 @@ namespace UI
         private Image _image;
         private bool _isRunning;
 
-        public event Action OnTimerEnded;
-    
         private void Start()
         {
             _image = GetComponent<Image>();
@@ -32,6 +30,8 @@ namespace UI
             _currentTime += Time.deltaTime;
             _image.fillAmount = _currentTime / maxTime;
         }
+
+        public event Action OnTimerEnded;
 
         public void StartTimer()
         {

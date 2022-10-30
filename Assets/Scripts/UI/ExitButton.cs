@@ -8,7 +8,7 @@ namespace UI
     public class ExitButton : MonoBehaviour
     {
         [SerializeField] private int mainMenuSceneIndex;
-    
+
         private Button _exitButton;
 
         private void Start()

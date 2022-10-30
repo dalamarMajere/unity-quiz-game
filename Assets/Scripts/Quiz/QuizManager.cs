@@ -1,8 +1,6 @@
 ﻿using Data;
 using UI;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 namespace Quiz
 {
@@ -64,12 +62,12 @@ namespace Quiz
             UnblockAnswerButtons();
             IncreaseCurrentQuestionIndex();
 
-            if (_currentScore >= _maxQuestionsAmount)
+            if (AreQuestionsEnded())
             {
                 EndQuiz();
                 return;
             }
-        
+
             timerController.StartTimer();
             sliderController.UpdateSlider(_currentQuestionIndex);
             ChangeQuestion();
@@ -93,7 +91,9 @@ namespace Quiz
                 quizUI.SetCorrectAnswerText();
             }
             else
+            {
                 _currentScore++;
+            }
 
             HighlightCorrectAnswer();
         }
@@ -145,7 +145,7 @@ namespace Quiz
             _answerButtons = GetComponentsInChildren<AnswerButton>();
         }
 
-        private bool IsQuestionsEnded()
+        private bool AreQuestionsEnded()
         {
             return _currentQuestionIndex > _maxQuestionsAmount;
         }
@@ -154,7 +154,7 @@ namespace Quiz
         {
         }
 
-        public void BlockAnswerButtons()
+        private void BlockAnswerButtons()
         {
             foreach (AnswerButton answerButton in _answerButtons) answerButton.BlockButton();
         }

@@ -8,12 +8,10 @@ namespace Quiz
     [RequireComponent(typeof(Button))]
     public class AnswerButton : MonoBehaviour
     {
-        public event Action OnClicked;
-
         [SerializeField] private Sprite defaultSprite;
         [SerializeField] private Sprite correctAnswerSprite;
         [SerializeField] private Sprite wrongAnswerSprite;
-    
+
         private TextMeshProUGUI _answer;
         private Button _button;
         private Image _image;
@@ -26,6 +24,8 @@ namespace Quiz
 
             _button.onClick.AddListener(ButtonClicked);
         }
+
+        public event Action OnClicked;
 
         private void ButtonClicked()
         {
@@ -41,7 +41,7 @@ namespace Quiz
         {
             _image.sprite = correctAnswerSprite;
         }
-    
+
         public void ChangeAnswer(string answer)
         {
             _answer.text = answer;
@@ -52,7 +52,7 @@ namespace Quiz
         {
             _button.interactable = false;
         }
-    
+
         public void UnblockButton()
         {
             _button.interactable = true;

@@ -7,8 +7,6 @@ namespace Quiz
 {
     public class QuizUI : MonoBehaviour
     {
-        public event Action OnNextQuestionClicked;
-    
         [SerializeField] private TextMeshProUGUI questionText;
         [SerializeField] private TextMeshProUGUI scoreText;
         [SerializeField] private Button nextButton;
@@ -17,6 +15,8 @@ namespace Quiz
         {
             nextButton.onClick.AddListener(Notify);
         }
+
+        public event Action OnNextQuestionClicked;
 
         private void Notify()
         {
