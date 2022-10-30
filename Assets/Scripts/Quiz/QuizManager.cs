@@ -1,7 +1,6 @@
 ﻿using Data;
 using UI;
 using UnityEngine;
-using SceneManager = UnityEngine.SceneManagement.SceneManager;
 
 namespace Quiz
 {
@@ -11,15 +10,17 @@ namespace Quiz
         [SerializeField] private Timer timerController;
         [SerializeField] private SliderController sliderController;
         [SerializeField] private QuestionsData questionData;
+        [SerializeField] private ScoreHolder scoreHolder;
 
         private AnswerButton[] _answerButtons;
         private int _currentQuestionIndex = -1;
 
-        private int _currentScore;
         private int _maxQuestionsAmount;
 
         private void Start()
         {
+            scoreHolder.Score = 0;
+
             GetReferences();
 
             _maxQuestionsAmount = questionData.GetQuestionsAmount();
@@ -32,7 +33,7 @@ namespace Quiz
 
         private void LateUpdate()
         {
-            quizUI.SetScoreText(_currentScore, _maxQuestionsAmount);
+            quizUI.SetScoreText(scoreHolder.Score, _maxQuestionsAmount);
         }
 
         private void OnDestroy()
@@ -52,9 +53,7 @@ namespace Quiz
             quizUI.OnNextQuestionClicked += SetNewQuestionSet;
 
             for (int index = 0; index < _answerButtons.Length; index++)
-            {
                 _answerButtons[index].OnClicked += PrepareToNextQuestion;
-            }
         }
 
         private void SetNewQuestionSet()
@@ -93,7 +92,7 @@ namespace Quiz
             else
             {
                 quizUI.SetCorrectAnswerText();
-                _currentScore++;
+                scoreHolder.Score++;
             }
 
             HighlightCorrectAnswer();
