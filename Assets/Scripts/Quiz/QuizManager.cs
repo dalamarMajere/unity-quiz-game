@@ -148,7 +148,7 @@ namespace Quiz
 
         private bool AreQuestionsEnded()
         {
-            return _currentQuestionIndex > _maxQuestionsAmount;
+            return _currentQuestionIndex >= _maxQuestionsAmount;
         }
 
         private void EndQuiz()
