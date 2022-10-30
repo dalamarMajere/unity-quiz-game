@@ -9,7 +9,7 @@ namespace Quiz
     public class QuizManager : MonoBehaviour
     {
         [SerializeField] private QuizUI quizUI;
-        [SerializeField] private Timer.Timer timerController;
+        [SerializeField] private Timer timerController;
         [SerializeField] private SliderController sliderController;
         [SerializeField] private QuestionsData questionData;
 
