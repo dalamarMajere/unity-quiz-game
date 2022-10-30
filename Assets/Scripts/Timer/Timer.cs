@@ -10,7 +10,7 @@ namespace Timer
         private float _currentTime;
 
         private Image _image;
-        private bool isRunning;
+        private bool _isRunning;
 
         public event Action OnTimerEnded;
     
@@ -21,7 +21,7 @@ namespace Timer
 
         private void Update()
         {
-            if (!isRunning) return;
+            if (!_isRunning) return;
 
             if (_currentTime >= maxTime)
             {
@@ -36,12 +36,12 @@ namespace Timer
         public void StartTimer()
         {
             _currentTime = 0;
-            isRunning = true;
+            _isRunning = true;
         }
 
         public void StopTimer()
         {
-            isRunning = false;
+            _isRunning = false;
         }
 
         private void Notify()
