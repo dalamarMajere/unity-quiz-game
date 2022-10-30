@@ -1,6 +1,7 @@
 ﻿using Data;
 using UI;
 using UnityEngine;
+using SceneManager = UnityEngine.SceneManagement.SceneManager;
 
 namespace Quiz
 {
@@ -152,6 +153,7 @@ namespace Quiz
 
         private void EndQuiz()
         {
+            SceneLoader.LoadGameEndScene();
         }
 
         private void BlockAnswerButtons()

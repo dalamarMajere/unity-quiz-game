@@ -1,3 +1,4 @@
+using Data;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -8,8 +9,6 @@ namespace UI
     {
         [SerializeField] private Button startButton;
         [SerializeField] private Button exitButton;
-
-        [SerializeField] private int gameSceneIndex;
 
         private void Start()
         {
@@ -25,17 +24,12 @@ namespace UI
 
         private void StartGame()
         {
-            LoadScene(gameSceneIndex);
+            SceneLoader.LoadGameEndScene();
         }
 
         private void ExitGame()
         {
             Application.Quit();
-        }
-
-        private void LoadScene(int index)
-        {
-            SceneManager.LoadScene(index);
         }
     }
 }

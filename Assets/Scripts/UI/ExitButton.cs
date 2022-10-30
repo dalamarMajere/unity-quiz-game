@@ -1,3 +1,4 @@
+using Data;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -7,8 +8,6 @@ namespace UI
     [RequireComponent(typeof(Button))]
     public class ExitButton : MonoBehaviour
     {
-        [SerializeField] private int mainMenuSceneIndex;
-
         private Button _exitButton;
 
         private void Start()
@@ -24,7 +23,7 @@ namespace UI
 
         private void ExitToMainMenu()
         {
-            SceneManager.LoadScene(mainMenuSceneIndex);
+            SceneLoader.LoadMainMenuScene();
         }
     }
 }
