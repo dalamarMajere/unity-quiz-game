@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace Timer
 {
-    public class TimerController : MonoBehaviour
+    public class Timer : MonoBehaviour
     {
         [SerializeField] private float maxTime;
         private float _currentTime;

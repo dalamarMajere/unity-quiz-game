@@ -1,14 +1,15 @@
 ﻿using Data;
-using Timer;
 using UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace Quiz
 {
     public class QuizManager : MonoBehaviour
     {
         [SerializeField] private QuizUI quizUI;
-        [SerializeField] private TimerController timerController;
+        [SerializeField] private Timer.Timer timerController;
         [SerializeField] private SliderController sliderController;
         [SerializeField] private QuestionsData questionData;
 
@@ -57,7 +58,7 @@ namespace Quiz
                 _answerButtons[index1].OnClicked += () => PrepareToNextQuestion(index1);
             }
         }
-    
+
         private void SetNewQuestionSet()
         {
             UnblockAnswerButtons();
