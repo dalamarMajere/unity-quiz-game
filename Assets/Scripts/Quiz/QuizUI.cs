@@ -40,9 +40,9 @@ namespace Quiz
             questionText.text = "Correct!";
         }
 
-        public void SetScoreText(string s)
+        public void SetScoreText(int score, int maxScore)
         {
-            scoreText.text = s;
+            scoreText.text = $"{score}/{maxScore}";
         }
 
         public void EnableNextButton()

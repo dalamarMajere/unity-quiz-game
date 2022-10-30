@@ -32,7 +32,7 @@ namespace Quiz
 
         private void LateUpdate()
         {
-            quizUI.SetScoreText($"Score: {_currentScore}/{_maxQuestionsAmount}");
+            quizUI.SetScoreText(_currentScore, _maxQuestionsAmount);
         }
 
         private void OnDestroy()
