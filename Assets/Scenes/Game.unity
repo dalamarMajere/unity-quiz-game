@@ -636,6 +636,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2017267105}
     m_Modifications:
     - target: {fileID: 837704713, guid: fd11b8c1631498a419c3c9a943652864, type: 3}
+      propertyPath: index
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 837704713, guid: fd11b8c1631498a419c3c9a943652864, type: 3}
       propertyPath: defaultSprite
       value: 
       objectReference: {fileID: 21300000, guid: 06f43e1879497b94186d323780f78a25, type: 3}
@@ -1154,6 +1158,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2017267105}
     m_Modifications:
     - target: {fileID: 837704713, guid: fd11b8c1631498a419c3c9a943652864, type: 3}
+      propertyPath: index
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 837704713, guid: fd11b8c1631498a419c3c9a943652864, type: 3}
       propertyPath: defaultSprite
       value: 
       objectReference: {fileID: 21300000, guid: 06f43e1879497b94186d323780f78a25, type: 3}
@@ -1267,6 +1275,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2017267105}
     m_Modifications:
+    - target: {fileID: 837704713, guid: fd11b8c1631498a419c3c9a943652864, type: 3}
+      propertyPath: index
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 837704713, guid: fd11b8c1631498a419c3c9a943652864, type: 3}
       propertyPath: defaultSprite
       value: 

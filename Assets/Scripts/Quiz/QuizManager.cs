@@ -53,8 +53,7 @@ namespace Quiz
 
             for (int index = 0; index < _answerButtons.Length; index++)
             {
-                int index1 = index;
-                _answerButtons[index1].OnClicked += () => PrepareToNextQuestion(index1);
+                _answerButtons[index].OnClicked += PrepareToNextQuestion;
             }
         }
 
@@ -89,10 +88,11 @@ namespace Quiz
             if (chosenAnswerIndex != GetCorrectAnswerIndex())
             {
                 HighlightWrongAnswer(chosenAnswerIndex);
-                quizUI.SetCorrectAnswerText();
+                quizUI.SetWrongAnswerText();
             }
             else
             {
+                quizUI.SetCorrectAnswerText();
                 _currentScore++;
             }
 
@@ -101,7 +101,7 @@ namespace Quiz
 
         private void HighlightWrongAnswer(int chosenAnswerIndex)
         {
-            _answerButtons[chosenAnswerIndex].SetAnswerCorrect();
+            _answerButtons[chosenAnswerIndex].SetAnswerWrong();
         }
 
         private int GetCorrectAnswerIndex()

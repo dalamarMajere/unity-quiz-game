@@ -11,6 +11,7 @@ namespace Quiz
         [SerializeField] private Sprite defaultSprite;
         [SerializeField] private Sprite correctAnswerSprite;
         [SerializeField] private Sprite wrongAnswerSprite;
+        [SerializeField] private int index;
 
         private TextMeshProUGUI _answer;
         private Button _button;
@@ -25,11 +26,11 @@ namespace Quiz
             _button.onClick.AddListener(ButtonClicked);
         }
 
-        public event Action OnClicked;
+        public event Action<int> OnClicked;
 
         private void ButtonClicked()
         {
-            OnClicked?.Invoke();
+            OnClicked?.Invoke(index);
         }
 
         public void SetAnswerWrong()

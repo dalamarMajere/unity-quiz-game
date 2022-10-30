@@ -24,7 +24,7 @@ namespace UI
 
         private void StartGame()
         {
-            SceneLoader.LoadGameEndScene();
+            SceneLoader.LoadGameScene();
         }
 
         private void ExitGame()

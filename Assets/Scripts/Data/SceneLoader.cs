@@ -4,8 +4,8 @@ namespace Data
 {
     public static class SceneLoader
     {
-        private static int MainMenuSceneIndex => 1;
-        private static int GameSceneIndex => 0;
+        private static int MainMenuSceneIndex => 0;
+        private static int GameSceneIndex => 1;
         private static int GameEndSceneIndex => 2;
 
         public static void LoadGameScene()
