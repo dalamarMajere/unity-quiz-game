@@ -20,3 +20,113 @@ MonoBehaviour:
     - -3
     - 3f
     correctAnswerIndex: 2
+  - question: 'How many times for loop will be iterated?
+
+      for (int i = 0; i
+      <= 5; i++)
+
+      {
+
+      }'
+    answers:
+    - 5
+    - 6
+    - 4
+    - 0
+    correctAnswerIndex: 1
+  - question: What is a name of C# compiler?
+    answers:
+    - Intermediate Language
+    - C++
+    - Roslyn
+    - Amen
+    correctAnswerIndex: 2
+  - question: Does .Net use virtual machine?
+    answers:
+    - Yes
+    - No
+    - Yes, only in runtime
+    - It depens on the project
+    correctAnswerIndex: 0
+  - question: What is CoreCLR?
+    answers:
+    - Framework
+    - Virtual Machine
+    - Standard
+    - Compiler
+    correctAnswerIndex: 1
+  - question: What codename does C# has?
+    answers:
+    - C++ 2.0
+    - A#
+    - COOL
+    - MORE
+    correctAnswerIndex: 2
+  - question: What does LINQ abbreviation stand for?
+    answers:
+    - Language INtegrated Queries
+    - Language Iterative Native Queries
+    - LInking Native Queries
+    - Linking INtegrated Queries
+    correctAnswerIndex: 0
+  - question: When was C# 10 released?
+    answers:
+    - 2015
+    - 2012
+    - 2020
+    - 2022
+    correctAnswerIndex: 2
+  - question: Select Camel case
+    answers:
+    - orderDetail
+    - OrderDetail
+    - order_detail
+    - _OrderDetail
+    correctAnswerIndex: 0
+  - question: 'What will be printed?
+
+      height = 5;
+
+      Console.Writeln($"{nameof(height)}
+      = height");'
+    answers:
+    - height = 5
+    - height = height
+    - '"height = height"'
+    - $"{nameof(height)} = height"
+    correctAnswerIndex: 1
+  - question: Raw literal starts with...
+    answers:
+    - '""'
+    - $
+    - '@'
+    - '"""'
+    correctAnswerIndex: 3
+  - question: A literal number without a decimal point is inferred as an ... variable
+    answers:
+    - int
+    - double
+    - float
+    - short int
+    correctAnswerIndex: 0
+  - question: Suffix M is infers...
+    answers:
+    - long
+    - ulong
+    - int
+    - decimal
+    correctAnswerIndex: 3
+  - question: Will XmlDocument xml3 = new(); be compiled?
+    answers:
+    - yes, always
+    - no, never
+    - no, since C# 9
+    - no, since C# 11
+    correctAnswerIndex: 2
+  - question: What is default value for DateTime type?
+    answers:
+    - 01/01/0000 00:00:00
+    - 01/01/0001 00:00:01
+    - 01/01/0001 00:00:00
+    - 01/01/2000 00:00:00
+    correctAnswerIndex: 2
