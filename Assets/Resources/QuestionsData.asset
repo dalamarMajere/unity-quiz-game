@@ -94,7 +94,7 @@ MonoBehaviour:
     - height = height
     - '"height = height"'
     - $"{nameof(height)} = height"
-    correctAnswerIndex: 0
+    correctAnswerIndex: 1
   - question: Raw literal starts with...
     answers:
     - '""'
